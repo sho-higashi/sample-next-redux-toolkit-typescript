@@ -1,9 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { Action, configureStore, ThunkAction, ThunkDispatch } from '@reduxjs/toolkit'
+import { createWrapper } from 'next-redux-wrapper';
 
 import clockReducer from './lib/slices/clockSlice'
 import counterReducer from './lib/slices/counterSlice'
 
-const store= configureStore({
+const makeStore = ()=> configureStore({
   reducer: {
     counter: counterReducer,
     clock: clockReducer,
@@ -11,7 +12,9 @@ const store= configureStore({
   devTools: true,
 })
 
-export default store;
+export type AppStore = ReturnType<typeof makeStore>;
+export type AppState = ReturnType<AppStore['getState']>;
+export type AppDispatch = ThunkDispatch<AppState, unknown, Action>;
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, AppState, unknown, Action>;
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export const wrapper = createWrapper<AppStore>(makeStore as any);

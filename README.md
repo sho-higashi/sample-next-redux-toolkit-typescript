@@ -1,23 +1,8 @@
-# Redux Toolkit example
+# an example of redux-toolkit, typescript, and next-redux-wrapper
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+Redux-toolkit, typescript, and next-redux-wrapper are popular library and framework used with Next.js.
 
-The **Redux Toolkit** is intended to be the standard way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+While there are the examples of each of them with Next.js in its official Github of the Vercel,
+There is not an example with all of them.
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux-toolkit&project-name=with-redux-toolkit&repository-name=with-redux-toolkit)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux-toolkit with-redux-toolkit-app
-# or
-yarn create next-app --example with-redux-toolkit with-redux-toolkit-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Here is an example implementation combined of all of them.
