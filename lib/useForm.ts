@@ -1,11 +1,11 @@
-const useForm = (defaultValues = {}) => (handler) => async (event) => {
+const useForm = (defaultValues = {}) => (handler:any) => async (event:any) => {
   event.preventDefault()
   event.persist()
   const form = event.target
   const data = Array.from(form.elements)
-    .filter((element) => element.hasAttribute('name'))
+    .filter((element:any) => element.hasAttribute('name'))
     .reduce(
-      (object, element) => ({
+      (object:object, element:any) => ({
         ...object,
         [element.name]: element.value,
       }),

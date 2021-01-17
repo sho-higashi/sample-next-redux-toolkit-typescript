@@ -24,7 +24,7 @@ const Counter = () => {
   function dispatchReset() {
     dispatch(reset())
   }
-  function changeIncrementAmount(event) {
+  function changeIncrementAmount(event:React.ChangeEvent<HTMLInputElement>) {
     setIncrementAmount(event.target.value)
   }
   function dispatchIncrementByAmount() {

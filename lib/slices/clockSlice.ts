@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+export type ClockState = {
+    lastUpdate: number;
+    light: boolean;
+  }
+
 const clockSlice = createSlice({
   name: 'clock',
   initialState: {
@@ -14,7 +19,7 @@ const clockSlice = createSlice({
   },
 })
 
-export const selectClock = (state) => state.clock
+export const selectClock = (state:{clock: ClockState}) => state.clock
 
 export const { tick } = clockSlice.actions
 
